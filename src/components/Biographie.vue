@@ -1,5 +1,6 @@
 <template>
     <div>
+        <img id="photo-portrait" src="../assets/img/photo.png" alt="Photo de Alain ORLUK">
     <p>
 Je m’appelle Alain ORLUK et je suis formateur en développement web.
     </p>
@@ -49,7 +50,7 @@ favorablement ma candidature.
     <p>
 C’est ainsi que j’ai pris mes fonctions de formateur et que j’ai pris en charge une
 session de 9 apprenants adultes en formation certifiante pour le titre professionnel
-de DWWM (Développeur.euse Web & Web mobile, niveau 5).
+de DWWM (Développeur.euse Web &amp; Web mobile, niveau 5).
 Tout au long de la formation, chaque jour, à chaque minute, j’ai eu à cœur de leur
 transmettre toutes les compétences que je savais indispensables lorsque l’on débute
 une carrière dans le domaine.
@@ -75,6 +76,11 @@ expérience le bagage professionnel et technique que je cherchais.
     border: 1px solid #D9A78B;
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
    }
+    #photo-portrait {
+        display: block;
+        width: 15%;
+        margin: 4rem auto;
+    }
     p {
         width: 70%;
         margin: 3rem auto;

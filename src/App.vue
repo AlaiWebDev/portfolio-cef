@@ -15,7 +15,7 @@
         <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><img src="./assets/img/logo/mail.png" alt="logo de mail"></a>
         </div>
         <small>
-        &copy;<time datetime="2023-12-05">05/12/2023</time>
+        &copy;<time datetime="2023-12-06"> 06/12/2023</time>
         </small>
     </footer>
 </template>
@@ -49,6 +49,11 @@ footer {
     flex-direction: column;
     align-items: center;
     background-color:#010440 ;
+}
+footer div {
+    padding: .5rem;
+    border-radius: 1rem;
+    background-color:rgba(255, 255, 255, 0.116) ;
 }
 small {
     justify-self: flex-start;

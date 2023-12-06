@@ -3,7 +3,6 @@
 </script>
 
 <template>
-    <h2>Me contacter</h2>
     <form @submit.prevent action="#" method="post">
         <label>
             Nom

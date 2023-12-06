@@ -1,6 +1,6 @@
 <template>
     <header>
-            <RouterLink to="/"><img class="photo" src="../assets/img/photo.png" alt="Photo de Alain ORLUK"></RouterLink>
+            <RouterLink to="/"><img class="photo" src="../assets/img/logo/logo.png" alt="Photo de Alain ORLUK"></RouterLink>
             <h1>Portfolio de Alain ORLUK</h1>
             <a href="#" @click="toggle"  class="toggle-button">
             <span class="bar"></span>
@@ -63,6 +63,7 @@
         object-fit: cover;
         border-radius: 50%;
         box-shadow: 0 0 30px white;
+        background-color: white;
     }
 
     .photo:hover {

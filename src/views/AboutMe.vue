@@ -5,4 +5,7 @@
 <template>
     <Biographie />
 </template>
+<style scoped>
+    
+</style>
 
