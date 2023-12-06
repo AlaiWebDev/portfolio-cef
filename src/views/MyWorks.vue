@@ -23,5 +23,6 @@ iframe {
     width: 90%;
     height: 80vh;
     margin: 1rem auto;
+    box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
 }
 </style>

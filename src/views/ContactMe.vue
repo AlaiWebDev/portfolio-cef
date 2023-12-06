@@ -3,7 +3,7 @@
 </script>
 
 <template>
-    <form @submit.prevent action="#" method="post">
+    <form @submit.prevent>
         <label>
             Nom
             <input type="text" name="" id="">
@@ -43,12 +43,22 @@ label {
     width: 40%;
     text-align: left;
 }
+label:last-of-type {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
 input[type='text'] {
     border: 2px solid #D9A78B;
+    color: #010440;
+    font-weight: 800;
 }
 textarea {
-    width: 70%;
+    width: 80%;
     height: 10rem;
+    resize: none;
+    font-weight: 800;
+    font-style: italic;
     color: #010326;
     border: 2px solid #D9A78B;
 }

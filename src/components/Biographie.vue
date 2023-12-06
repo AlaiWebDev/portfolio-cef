@@ -1,6 +1,7 @@
 <template>
     <div>
-        <img id="photo-portrait" src="../assets/img/photo.png" alt="Photo de Alain ORLUK">
+    <img id="photo-portrait" src="../assets/img/photo.png" alt="Photo de Alain ORLUK">
+        
     <p>
 Je m’appelle Alain ORLUK et je suis formateur en développement web.
     </p>
@@ -80,7 +81,10 @@ expérience le bagage professionnel et technique que je cherchais.
         display: block;
         width: 15%;
         margin: 4rem auto;
+        border-radius: 5px;
+        border: 15px solid rgba(253, 252, 252, 0.1);
     }
+
     p {
         width: 70%;
         margin: 3rem auto;
