@@ -1,47 +1,26 @@
 <script setup>
     import { ref } from 'vue'
     import MyModal from '../components/modals/MyModal.vue'
-    import MyModal2 from '../components/modals/MyModal2.vue'
-    import MyModal3 from '../components/modals/MyModal3.vue'
-
-    // const works = ref([
-    //     {
-    //         nom: "DWWM-ID-Formation-Strasbourg",
-    //         date: "03/2022-11/2022",
-    //         apprenants: 12,
-    //         image: "work-1"
-    //     },
-    //     {
-    //         nom: "DWWM-AFPA-Angers",
-    //         date: "09/2023-09/2023",
-    //         apprenants: 11,
-    //         image: "work-2"
-    //     },
-    //     {
-    //         nom: "DWWM-AFPA-Marseille",
-    //         date: "09/2023-11/2023",
-    //         apprenants: 17,
-    //         image: "work-3"
-    //     },
-    // ])
-    const work1 = ref({
+    const works = ref([
+        {
         nom: "DWWM-ID-Formation-Strasbourg",
             date: "03/2022-11/2022",
             apprenants: 12,
             image: "work-1"
-    })
-    const work2 = ref({
-        nom: "DWWM-AFPA-Angers",
-        date: "09/2023-09/2023",
-        apprenants: 11,
-        image: "work-2"
-    })
-    const work3 = ref({
-        nom: "DWWM-AFPA-Marseille",
-        date: "09/2023-11/2023",
-        apprenants: 17,
-        image: "work-3"
-    })
+        },
+        {
+            nom: "DWWM-AFPA-Angers",
+            date: "09/2023-09/2023",
+            apprenants: 11,
+            image: "work-2"
+        },
+        {
+            nom: "DWWM-AFPA-Marseille",
+            date: "09/2023-11/2023",
+            apprenants: 17,
+            image: "work-3"
+        }
+    ])
     const isModalOpened = ref(false);
     const isModal2Opened = ref(false);
     const isModal3Opened = ref(false);
@@ -67,9 +46,9 @@
 </script>
 <template>
     <!-- <div v-for="(work, index) in works" :key="index"> -->
-    <h3>{{ work1.nom }}</h3>
-        <button @click="openModal"><img :src="`../../public/${work1.image}.jpg`" :alt="`${work1.image}`"></button>
-        <MyModal :work-item="work1" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+    <h3>{{ works[0].nom }}</h3>
+        <button @click="openModal"><img :src="`../../public/${works[0].image}.jpg`" :alt="`${works[0].image}`"></button>
+        <MyModal :work-item="works[0]" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
             <template #header>
             </template>
             <template #content>
@@ -77,26 +56,26 @@
             <template #footer>
             </template>
         </MyModal>
-    <h3>{{ work2.nom }}</h3>
-        <button @click="openModal2"><img :src="`../../public/${work2.image}.jpg`" :alt="`${work2.image}`"></button>
-        <MyModal2 :work-item="work2" :isOpen="isModal2Opened" @modal-close="closeModal2" name="first-modal">
+    <h3>{{ works[1].nom }}</h3>
+        <button @click="openModal2"><img :src="`../../public/${works[1].image}.jpg`" :alt="`${works[1].image}`"></button>
+        <MyModal :work-item="works[1]" :isOpen="isModal2Opened" @modal-close="closeModal2" name="first-modal">
             <template #header>
             </template>
             <template #content>
             </template>
             <template #footer>
             </template>
-        </MyModal2>
-    <h3>{{ work3.nom }}</h3>
-        <button @click="openModal3"><img :src="`../../public/${work3.image}.jpg`" :alt="`${work3.image}`"></button>
-        <MyModal3 :work-item="work3" :isOpen="isModal3Opened" @modal-close="closeModal3" name="first-modal">
+        </MyModal>
+    <h3>{{ works[2].nom }}</h3>
+        <button @click="openModal3"><img :src="`../../public/${works[2].image}.jpg`" :alt="`${works[2].image}`"></button>
+        <MyModal :work-item="works[2]" :isOpen="isModal3Opened" @modal-close="closeModal3" name="first-modal">
             <template #header>
             </template>
             <template #content>
             </template>
             <template #footer>
             </template>
-        </MyModal3>
+        </MyModal>
 </template>
 <style scoped>
 * {

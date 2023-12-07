@@ -10,12 +10,12 @@
     </main>
     <footer>
         <div>
-        <a href="https://linkedin.com/in/alainfreelance" target="_blank"><img src="./assets/img/logo/linkedin.png" alt="logo de linkedin"></a>
-        <a href="https://github.com/AlaiWebDev" target="_blank"><img src="./assets/img/logo/github.png" alt="logo de github"></a>
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><img src="./assets/img/logo/mail.png" alt="logo de mail"></a>
+            <a href="https://linkedin.com/in/alainfreelance" target="_blank"><img src="./assets/img/logo/linkedin.png" alt="Logo de LinkedIn"></a>
+            <a href="https://github.com/AlaiWebDev" target="_blank"><img src="./assets/img/logo/github.png" alt="Logo de GitHub"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new" target="_blank"><img src="./assets/img/logo/mail.png" alt="Logo de Google Mail"></a>
         </div>
         <small>
-        &copy;<time datetime="2023-12-06"> 06/12/2023</time>
+            &copy;<time datetime="2023-12-06"> 06/12/2023</time>
         </small>
     </footer>
 </template>
