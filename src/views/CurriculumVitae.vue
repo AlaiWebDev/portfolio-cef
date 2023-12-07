@@ -5,7 +5,7 @@
 </template>
 
 <style scoped>
-a img { 
+img { 
         display: block;
         width: 50%;
         margin: 3rem auto;

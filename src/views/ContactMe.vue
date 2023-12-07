@@ -59,7 +59,7 @@ textarea {
     resize: none;
     font-weight: 800;
     font-style: italic;
-    color: #010326;
+    color: rgb(0, 2, 41);
     border: 2px solid #D9A78B;
 }
 input[type='submit'] {

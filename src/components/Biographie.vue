@@ -74,7 +74,7 @@ expérience le bagage professionnel et technique que je cherchais.
    div {
     width: 70%;
     margin: 5rem auto;
-    border: 1px solid #D9A78B;
+    border: 1px solid rgb(218, 168, 139);
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
    }
     #photo-portrait {
