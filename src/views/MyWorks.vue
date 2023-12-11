@@ -21,34 +21,21 @@
             image: "work-3"
         }
     ])
+    const itemToDisplay = ref(null);
     const isModalOpened = ref(false);
-    const isModal2Opened = ref(false);
-    const isModal3Opened = ref(false);
-
-    const openModal = () => {
-    isModalOpened.value = true;
+    const openModal = (e) => {
+        itemToDisplay.value = e.target.id;
+        isModalOpened.value = true;
     };
     const closeModal = () => {
-    isModalOpened.value = false;
-    };
-    const openModal2 = () => {
-    isModal2Opened.value = true;
-    };
-    const closeModal2 = () => {
-    isModal2Opened.value = false;
-    };
-    const openModal3 = () => {
-    isModal3Opened.value = true;
-    };
-    const closeModal3 = () => {
-    isModal3Opened.value = false;
+        isModalOpened.value = false;
     };
 </script>
 <template>
-    <!-- <div v-for="(work, index) in works" :key="index"> -->
-    <h3>{{ works[0].nom }}</h3>
-        <button @click="openModal"><img :src="`../../public/${works[0].image}.jpg`" :alt="`${works[0].image}`"></button>
-        <MyModal :work-item="works[0]" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+    <section v-for="(work, index) in works">
+        <h3>{{ work.nom }}</h3>
+        <button @click="openModal"><img :src="`../../public/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
+        <MyModal :to-display="Number(itemToDisplay)" :jobs="works" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
             <template #header>
             </template>
             <template #content>
@@ -56,26 +43,7 @@
             <template #footer>
             </template>
         </MyModal>
-    <h3>{{ works[1].nom }}</h3>
-        <button @click="openModal2"><img :src="`../../public/${works[1].image}.jpg`" :alt="`${works[1].image}`"></button>
-        <MyModal :work-item="works[1]" :isOpen="isModal2Opened" @modal-close="closeModal2" name="first-modal">
-            <template #header>
-            </template>
-            <template #content>
-            </template>
-            <template #footer>
-            </template>
-        </MyModal>
-    <h3>{{ works[2].nom }}</h3>
-        <button @click="openModal3"><img :src="`../../public/${works[2].image}.jpg`" :alt="`${works[2].image}`"></button>
-        <MyModal :work-item="works[2]" :isOpen="isModal3Opened" @modal-close="closeModal3" name="first-modal">
-            <template #header>
-            </template>
-            <template #content>
-            </template>
-            <template #footer>
-            </template>
-        </MyModal>
+    </section>
 </template>
 <style scoped>
 * {
