@@ -1,6 +1,6 @@
 <template>
     <h1>404</h1>
-    <img src="../../public/oops.jpg" alt="Image de  la page 404">
+    <img src="../assets/img/oops.jpg" alt="Image de  la page 404">
     <h2>La page que vous demandez n'existe pas</h2>
     <RouterLink to="/">Retour</RouterLink>
 </template>

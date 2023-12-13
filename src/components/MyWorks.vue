@@ -32,19 +32,21 @@
     };
 </script>
 <template>
-    <h2 id="my_works">Mes réalisations</h2>
-    <section v-for="(work, index) in works">
-        <h3>{{ work.nom }}</h3>
-        <button @click="openModal"><img :src="`../../public/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
-        <MyModal :to-display="Number(itemToDisplay)" :jobs="works" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
-            <template #header>
-            </template>
-            <template #content>
-            </template>
-            <template #footer>
-            </template>
-        </MyModal>
-    </section>
+    <div id="my_works">
+        <h2>Mes réalisations</h2>
+        <section v-for="(work, index) in works">
+            <h3>{{ work.nom }}</h3>
+            <button @click="openModal"><img :src="`../../src/assets/img/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
+            <MyModal :to-display="Number(itemToDisplay)" :jobs="works" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+                <template #header>
+                </template>
+                <template #content>
+                </template>
+                <template #footer>
+                </template>
+            </MyModal>
+        </section>
+    </div>
 </template>
 <style scoped>
 

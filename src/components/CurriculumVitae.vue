@@ -1,7 +1,9 @@
 <template>
-    <h2 id="cv">Mon Curriculum Vitae</h2>
+    <div id="cv">
+        <h2>Mon Curriculum Vitae</h2>
+        <a href="../../public/cv-alain-orluk.pdf" target="_blank"><img src="@/assets/img/cv-alain-orluk.png" alt="Curriculum Vitae de Alain ORLUK"></a>
+    </div>
     
-    <a href="../../public/cv-alain-orluk.pdf" target="_blank"><img src="../assets/img/cv-alain-orluk.png" alt="Curriculum Vitae de Alain ORLUK"></a>
 </template>
 
 <style scoped>

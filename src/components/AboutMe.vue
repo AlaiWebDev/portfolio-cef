@@ -1,6 +1,6 @@
 <template>
     <div id="about_me">
-    <img id="photo-portrait" src="../assets/img/photo.png" alt="Photo de Alain ORLUK">
+    <img id="photo-portrait" src="@/assets/img/photo.png" alt="Photo de Alain ORLUK">
         
     <p>
 Je m’appelle Alain ORLUK et je suis formateur en développement web.

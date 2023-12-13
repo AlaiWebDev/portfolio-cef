@@ -3,26 +3,28 @@
 </script>
 
 <template>
-    <h2 id="contact">Me contacter</h2>
-    <form @submit.prevent>
-        <label>
-            Nom
-            <input type="text" name="" id="">
-        </label>
-        <label>
-            Prénom
-            <input type="text" name="" id="">
-        </label>
-        <label>
-            Adresse e-mail
-            <input type="text" name="" id="">
-        </label>
-        <label>
-            Message
-            <textarea name="" id="" cols="30" rows="10"></textarea>
-        </label>
-        <input type="submit" value="Envoyer">
-    </form>
+    <div id="contact">
+        <h2>Me contacter</h2>
+        <form @submit.prevent>
+            <label>
+                Nom
+                <input type="text" name="" id="">
+            </label>
+            <label>
+                Prénom
+                <input type="text" name="" id="">
+            </label>
+            <label>
+                Adresse e-mail
+                <input type="text" name="" id="">
+            </label>
+            <label>
+                Message
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </label>
+            <input type="submit" value="Envoyer">
+        </form>
+    </div>
 </template>
 
 <style scoped>

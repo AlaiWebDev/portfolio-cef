@@ -21,7 +21,7 @@
             </div>
             <div class="modal-body">
                 <slot name="content">
-                    <img :src="`../../public/${jobs[toDisplay].image}.jpg`" :alt="`${jobs[toDisplay].image}`">
+                    <img :src="`../../src/assets/img/${jobs[toDisplay].image}.jpg`" :alt="`${jobs[toDisplay].image}`">
                     <p v-if="jobs[toDisplay].apprenants">{{ jobs[toDisplay].apprenants }} apprenants</p>
                     <p>Période : {{ jobs[toDisplay].date }}</p>
                 </slot>
