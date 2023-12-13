@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="about_me">
     <img id="photo-portrait" src="../assets/img/photo.png" alt="Photo de Alain ORLUK">
         
     <p>
@@ -7,7 +7,7 @@ Je m’appelle Alain ORLUK et je suis formateur en développement web.
     </p>
     <p>
 Depuis toujours, je suis passionné par l’accompagnement des montées en
-compétences, que j’ai déjà expérimenté à travers diverses expériences.
+compétences, que j’ai déjà expérimentées à travers diverses expériences.
 Depuis quelques années maintenant j’ai le projet d’orienter ma carrière vers les
 métiers de la formation.
     </p>
@@ -20,7 +20,7 @@ m’animait.
     </p>
     <p>
 Dans le cadre de ma reconversion civile, j’ai choisi de suivre une formation
-d’Analyste-programmeur au sein d’un CFA, logiquement corrélée avec ma passion de
+d’Analyste-programmeur au sein d’un Centre A.F.P.A, logiquement corrélée avec ma passion de
 la programmation et de l’outil informatique.
 J’ai travaillé dans ce domaine durant 3 ans.
     </p>
@@ -72,7 +72,7 @@ expérience le bagage professionnel et technique que je cherchais.
 <style scoped>
    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
    div {
-    width: 70%;
+    width: 40%;
     margin: 5rem auto;
     border: 1px solid rgb(218, 168, 139);
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);

@@ -3,6 +3,7 @@
 </script>
 
 <template>
+    <h2 id="contact">Me contacter</h2>
     <form @submit.prevent>
         <label>
             Nom
@@ -30,17 +31,17 @@ form {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 60%;
-    height: 70vh;
-    padding: 2.5rem;
-    margin: 5rem auto;
+    width: 50%;
+    height: 60vh;
+    padding: 1.5rem;
+    margin: auto;
     border: 1px solid #D9A78B;
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
 }
 label {
     display: flex;
     justify-content: space-between;
-    width: 40%;
+    width: 35%;
     text-align: left;
 }
 label:last-of-type {

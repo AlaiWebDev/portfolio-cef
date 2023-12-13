@@ -32,6 +32,7 @@
     };
 </script>
 <template>
+    <h2 id="my_works">Mes réalisations</h2>
     <section v-for="(work, index) in works">
         <h3>{{ work.nom }}</h3>
         <button @click="openModal"><img :src="`../../public/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
@@ -46,18 +47,12 @@
     </section>
 </template>
 <style scoped>
-* {
-    color: #010440;
-}
-div:first-of-type {
-    margin-top: 4rem;
-}
 
 div {
     margin-bottom: 2rem;
 }
 h3:first-of-type {
-    margin-top: 4rem;
+    margin-top: 1rem;
 }
 h3 {
     width: fit-content;
@@ -68,14 +63,14 @@ h3 {
 
 button {
     display: block;
-    width: 250px;
+    width: fit-content;
     margin: auto;
     margin-top: 1rem;  
 }
 img {
     display: block;
-    width: 246px;
-    height: 150px;
+    width: 350px;
+    height: 200px;
     margin: auto;
 }
 

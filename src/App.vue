@@ -5,7 +5,7 @@
 
 <template>
     <Header />
-    <main>
+    <main id="main">
         <RouterView />
     </main>
     <footer>
@@ -40,7 +40,9 @@ main {
 }
 h2 {
     width: fit-content;
-    margin: 20px auto;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 footer {
