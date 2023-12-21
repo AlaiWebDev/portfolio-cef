@@ -57,6 +57,13 @@ footer div {
     border-radius: 1rem;
     background-color:rgba(255, 255, 255, 0.116) ;
 }
+footer a img {
+    border-radius: 50%;
+    margin: auto 5px;
+}
+footer a:hover img{
+    box-shadow: 0 0 6px 6px bisque;
+}
 small {
     justify-self: flex-start;
 }

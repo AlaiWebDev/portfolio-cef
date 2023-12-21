@@ -74,6 +74,7 @@ img {
     width: 350px;
     height: 200px;
     margin: auto;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1024px) {
