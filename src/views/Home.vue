@@ -1,4 +1,5 @@
 <script setup>
+    import Header from '../components/Header.vue'
     import AboutMe from '../components/AboutMe.vue'
     import ContactMe from '../components/ContactMe.vue'
     import CurriculumVitae from '@/components/CurriculumVitae.vue';
@@ -6,6 +7,7 @@
 </script>
 
 <template>
+    <Header />
     <AboutMe />
     <CurriculumVitae />
     <MyWorks /> 

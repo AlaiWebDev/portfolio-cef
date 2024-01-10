@@ -28,9 +28,7 @@
             </div>
             <div class="modal-footer">
                 <slot name="footer">
-                    <div>
-                        <button @click.stop="emit('modal-close')">Fermer</button>
-                    </div>
+                    <button @click.stop="emit('modal-close')">Fermer</button>
                 </slot>
             </div>
         </div>
