@@ -1,25 +1,26 @@
 <template>
     <header>
-            <RouterLink to="/"><img class="photo" src="../assets/img/logo/logo.png" alt="Photo de Alain ORLUK"></RouterLink>
-            <h1>Portfolio de Alain ORLUK</h1>
+        <a href="#main"><img class="photo" src="../assets/img/logo/logo.png" alt="Photo de Alain ORLUK"></a>
+            <h1>{{ title }}</h1>
             <a href="#" @click="toggle"  class="toggle-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a>
         <ul v-if="show">
-            <li><RouterLink to="/">À propos de moi</RouterLink></li>
-            <li><RouterLink to="/cv">Curriculum Vitae</RouterLink></li>
-            <li><RouterLink to="/works">Réalisations</RouterLink></li>
-            <li><RouterLink to="/contact">Contact</RouterLink></li>
+            <li><a href="#main">À propos de moi</a></li>
+            <li><a href="#cv">Curriculum Vitae</a></li>
+            <li><a href="#my_works">Réalisations</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
 </template>
 
 <script setup>
-    import { RouterLink } from "vue-router";
-    import {ref} from 'vue'
-    const show = ref(true)
+    import {ref} from 'vue';
+    
+    const show = ref(true);
+    const title = import.meta.env.VITE_APP_TITLE;
     function toggle(){
         show.value = !show.value
     }
@@ -29,7 +30,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     header{
         display: flex;
         top: 0;
