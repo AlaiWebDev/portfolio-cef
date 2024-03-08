@@ -1,26 +1,41 @@
 <script setup>
-
+    function sendEmail() {
+        (function(){
+          emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
+      })();
+      const params = {
+        to_name: "Alain",
+        from_name: document.querySelector("#senderName").value,
+        from_email: document.querySelector("#senderEmail").value,
+        message: document.querySelector("#emailMessage").value,
+        reply_to: document.querySelector("#senderEmail").value
+      }
+      
+      const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
+      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+      emailjs.send(serviceID, templateID, params)
+      .then( res => {
+        alert("E-mail envoyé avec succès");
+      })
+      .catch();
+    }
 </script>
 
 <template>
     <div id="contact">
         <h2>Me contacter</h2>
-        <form @submit.prevent>
+        <form @submit.prevent="sendEmail()">
             <label>
-                Nom
-                <input type="text" name="" id="">
-            </label>
-            <label>
-                Prénom
-                <input type="text" name="" id="">
+                Nom complet
+                <input type="text" name="" id="senderName">
             </label>
             <label>
                 Adresse e-mail
-                <input type="text" name="" id="">
+                <input type="text" name="" id="senderEmail">
             </label>
             <label>
                 Message
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <textarea name="" id="emailMessage" cols="30" rows="10"></textarea>
             </label>
             <input type="submit" value="Envoyer">
         </form>
