@@ -1,23 +1,23 @@
 <script setup>
+import emailjs from '@emailjs/browser';
     function sendEmail() {
-        (function(){
+        (() => {
           emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-      })();
-      const params = {
-        to_name: "Alain",
-        from_name: document.querySelector("#senderName").value,
-        from_email: document.querySelector("#senderEmail").value,
-        message: document.querySelector("#emailMessage").value,
-        reply_to: document.querySelector("#senderEmail").value
-      }
-      
-      const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
-      const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
-      emailjs.send(serviceID, templateID, params)
-      .then( res => {
-        alert("E-mail envoyé avec succès");
-      })
-      .catch();
+        })();
+        const params = {
+            to_name: "Alain",
+            from_name: document.querySelector("#senderName").value,
+            from_email: document.querySelector("#senderEmail").value,
+            message: document.querySelector("#emailMessage").value,
+            reply_to: document.querySelector("#senderEmail").value
+        }
+        const serviceID = import.meta.env.VITE_EMAILJS_SERVICEID;
+        const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
+        emailjs.send(serviceID, templateID, params)
+        .then( res => {
+            alert("E-mail envoyé avec succès");
+        })
+        .catch();
     }
 </script>
 
