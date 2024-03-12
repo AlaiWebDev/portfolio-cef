@@ -15,7 +15,7 @@ import emailjs from '@emailjs/browser';
         const templateID = import.meta.env.VITE_EMAILJS_TEMPLATEID;
         emailjs.send(serviceID, templateID, params)
         .then( res => {
-            alert("test - E-mail envoyé avec succès");
+            alert("L'e-mail a été envoyé avec succès");
         })
         .catch();
     }
