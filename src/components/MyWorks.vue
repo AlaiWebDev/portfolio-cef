@@ -21,10 +21,11 @@
             image: "work-3"
         }
     ])
-    const itemToDisplay = ref(null);
+    const selectedProject = ref({});
     const isModalOpened = ref(false);
+    
     const openModal = (e) => {
-        itemToDisplay.value = e.target.id;
+        selectedProject.value = works.value[Number(e.target.id)];
         isModalOpened.value = true;
     };
     const closeModal = () => {
@@ -37,7 +38,7 @@
         <section v-for="(work, index) in works">
             <h3>{{ work.nom }}</h3>
             <button @click="openModal"><img :src="`../../src/assets/img/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
-            <MyModal :to-display="Number(itemToDisplay)" :jobs="works" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
+            <MyModal :currentProject="selectedProject" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
                 <template #header>
                 </template>
                 <template #content>

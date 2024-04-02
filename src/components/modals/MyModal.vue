@@ -3,8 +3,7 @@
     import { onClickOutside } from '@vueuse/core'
     const props = defineProps({
         isOpen: Boolean,
-        toDisplay: Number,
-        jobs: Array
+        currentProject: Object,
     });
     const emit = defineEmits(["modal-close"]);
     const target = ref(null)
@@ -12,18 +11,18 @@
 </script>
 
 <template>
-    <div v-if="isOpen" class="modal-mask">
     
+    <div v-if="isOpen" class="modal-mask">
     <div class="modal-wrapper">
         <div class="modal-container" ref="target">
             <div class="modal-header">
-                <slot name="header"> {{ jobs[toDisplay].nom }} </slot>
+                <slot name="header"> {{ currentProject.nom }} </slot>
             </div>
             <div class="modal-body">
                 <slot name="content">
-                    <img :src="`../../src/assets/img/${jobs[toDisplay].image}.jpg`" :alt="`${jobs[toDisplay].image}`">
-                    <p v-if="jobs[toDisplay].apprenants">{{ jobs[toDisplay].apprenants }} apprenants</p>
-                    <p>Période : {{ jobs[toDisplay].date }}</p>
+                    <img :src="`../../src/assets/img/${currentProject.image}.jpg`" :alt="`${currentProject.image}`">
+                    <p v-if="currentProject.apprenants">{{ currentProject.apprenants }} apprenants</p>
+                    <p>Période : {{ currentProject.date }}</p>
                 </slot>
             </div>
             <div class="modal-footer">
