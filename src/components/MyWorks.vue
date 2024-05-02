@@ -3,18 +3,21 @@
     import MyModal from '../components/modals/MyModal.vue'
     const works = ref([
         {
-        nom: "DWWM-ID-Formation-Strasbourg",
+            id: 1,
+            nom: "DWWM-ID-Formation-Strasbourg",
             date: "03/2022-11/2022",
             apprenants: 12,
             image: "work-1"
         },
         {
+            id: 2,
             nom: "DWWM-AFPA-Angers",
             date: "09/2023-09/2023",
             apprenants: 11,
             image: "work-2"
         },
         {
+            id: 3,
             nom: "DWWM-AFPA-Marseille",
             date: "09/2023-11/2023",
             apprenants: 17,
@@ -24,8 +27,8 @@
     const selectedProject = ref({});
     const isModalOpened = ref(false);
     
-    const openModal = (e) => {
-        selectedProject.value = works.value[Number(e.target.id)];
+    const openModal = (work) => {
+        selectedProject.value = work;
         isModalOpened.value = true;
     };
     const closeModal = () => {
@@ -35,10 +38,10 @@
 <template>
     <div id="my_works">
         <h2>Mes réalisations</h2>
-        <section v-for="(work, index) in works">
+        <section v-for="work  in works" :key="work.id">
             <h3>{{ work.nom }}</h3>
-            <button @click="openModal">
-                <img :src="`../../src/assets/img/${work.image}.jpg`" :id="index" :alt="`${work.image}`">
+            <button @click="openModal(work)">
+                <img :src="`../../src/assets/img/${work.image}.jpg`" :alt="`${work.image}`">
             </button>
             <MyModal :currentProject="selectedProject" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
                 <template #header>
