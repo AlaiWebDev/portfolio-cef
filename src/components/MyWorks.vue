@@ -37,7 +37,9 @@
         <h2>Mes réalisations</h2>
         <section v-for="(work, index) in works">
             <h3>{{ work.nom }}</h3>
-            <button @click="openModal"><img :src="`../../src/assets/img/${work.image}.jpg`" :id="index" :alt="`${work.image}`"></button>
+            <button @click="openModal">
+                <img :src="`../../src/assets/img/${work.image}.jpg`" :id="index" :alt="`${work.image}`">
+            </button>
             <MyModal :currentProject="selectedProject" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
                 <template #header>
                 </template>
@@ -54,9 +56,11 @@
 div {
     margin-bottom: 2rem;
 }
+
 h3:first-of-type {
     margin-top: 1rem;
 }
+
 h3 {
     width: fit-content;
     margin: auto;
@@ -70,14 +74,11 @@ button {
     margin: auto;
     margin-top: 1rem;  
 }
+
 img {
     display: block;
     width: 350px;
     height: 200px;
     margin: auto;
 }
-
-@media screen and (max-width: 1024px) {
-
-    }
 </style>

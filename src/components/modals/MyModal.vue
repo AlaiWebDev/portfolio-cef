@@ -38,6 +38,7 @@
 p {
     color: #010440;
 }
+
 .modal-mask {
     position: fixed;
     z-index: 9998;
@@ -47,6 +48,7 @@ p {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+
 .modal-container {
     width: 400px;
     margin: 150px auto;
@@ -56,9 +58,11 @@ p {
     border-radius: 2px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
 }
+
 .modal-header{
     color: #010440;
 }
+
 button {
     display: block;
     width: fit-content;
