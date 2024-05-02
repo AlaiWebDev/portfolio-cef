@@ -55,22 +55,26 @@ form {
     border: 1px solid #D9A78B;
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
 }
+
 label {
     display: flex;
     justify-content: space-between;
     width: 35%;
     text-align: left;
 }
+
 label:last-of-type {
     display: flex;
     justify-content: space-evenly;
     width: 60%;
 }
+
 input[type='text'] {
     border: 2px solid #D9A78B;
     color: #010440;
     font-weight: 800;
 }
+
 textarea {
     width: 80%;
     height: 10rem;
@@ -80,16 +84,19 @@ textarea {
     color: rgb(0, 2, 41);
     border: 2px solid #D9A78B;
 }
+
 input[type='submit'] {
     padding: .5rem;
     color: #010326;
 }
+
 @media screen and (max-width: 1024px) {
     form {
         width: 90%;
     }
+
     label {
         width: 50%;
     }
-    }
+}
 </style>

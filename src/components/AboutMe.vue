@@ -1,6 +1,6 @@
 <template>
     <div id="about_me">
-    <img id="photo-portrait" src="@/assets/img/photo.png" alt="Photo de Alain ORLUK">
+    <img id="photo-portrait" src="@/assets/img/profile-picture.png" alt="Photo de Alain ORLUK">
         
     <p>
 Je m’appelle Alain ORLUK et je suis formateur en développement web.
@@ -70,38 +70,42 @@ expérience le bagage professionnel et technique que je cherchais.
 
 </template>
 <style scoped>
-   @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-   div {
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+div {
     width: 40%;
     margin: 5rem auto;
     border: 1px solid rgb(218, 168, 139);
     box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
-   }
-    #photo-portrait {
-        display: block;
-        width: 15%;
-        margin: 4rem auto;
-        border-radius: 5px;
-        border: 15px solid rgba(253, 252, 252, 0.1);
-    }
+}
 
-    p {
-        width: 70%;
-        margin: 3rem auto;
-        text-indent: 5%;
-        font-family: 'Lobster', sans-serif;
-        font-size: 1rem;
+#photo-portrait {
+    display: block;
+    width: 15%;
+    margin: 4rem auto;
+    border-radius: 5px;
+    border: 15px solid rgba(253, 252, 252, 0.1);
+}
+
+p {
+    width: 70%;
+    margin: 3rem auto;
+    text-indent: 5%;
+    font-family: 'Lobster', sans-serif;
+    font-size: 1rem;
+}
+
+p:nth-of-type(1) {
+    width: 50%;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 1024px) {
+    p, p:nth-of-type(1) {
+        width: 90%;
     }
-    p:nth-of-type(1) {
-        width: 50%;
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
-    @media screen and (max-width: 1024px) {
-        p, p:nth-of-type(1) {
-            width: 90%;
-        }
-    }
+}
 </style>
