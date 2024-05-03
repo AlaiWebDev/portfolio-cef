@@ -41,7 +41,7 @@
         <section v-for="work  in works" :key="work.id">
             <h3>{{ work.nom }}</h3>
             <button @click="openModal(work)">
-                <img :src="`../../src/assets/img/${work.image}.jpg`" :alt="`${work.image}`">
+                <img :src="`./src/assets/img/${work.image}.jpg`" :alt="`${work.image}`">
             </button>
             <MyModal :currentProject="selectedProject" :isOpen="isModalOpened" @modal-close="closeModal" name="first-modal">
                 <template #header>
