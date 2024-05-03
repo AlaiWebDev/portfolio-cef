@@ -20,7 +20,7 @@
             </div>
             <div class="modal-body">
                 <slot name="content">
-                    <img :src="`../../src/assets/img/${currentProject.image}.jpg`" :alt="`${currentProject.image}`">
+                    <img :src="`./src/assets/img/${currentProject.image}.jpg`" :alt="`${currentProject.image}`">
                     <p v-if="currentProject.apprenants">{{ currentProject.apprenants }} apprenants</p>
                     <p>Période : {{ currentProject.date }}</p>
                 </slot>

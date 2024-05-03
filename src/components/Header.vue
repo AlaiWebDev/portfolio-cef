@@ -1,7 +1,7 @@
 <template>
     <header>
         <a href="#main">
-            <img class="photo" src="../assets/img/logo/brand-logo.png" alt="Photo de Alain ORLUK">
+            <img class="photo" src="@/assets/img/logo/brand-logo.png" alt="Photo de Alain ORLUK">
         </a>
         <h1>{{ title }}</h1>
         <a href="#" @click="toggle" class="toggle-button">
