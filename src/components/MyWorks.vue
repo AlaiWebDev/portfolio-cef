@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import MyModal from "../components/modals/MyModal.vue";
+import Work from './Work.vue';
 const works = ref([
   {
     id: 1,
@@ -24,70 +24,23 @@ const works = ref([
     image: "work-3",
   },
 ]);
-const selectedProject = ref({});
-const isModalOpened = ref(false);
-
-const openModal = (work) => {
-  selectedProject.value = work;
-  isModalOpened.value = true;
-};
-const closeModal = () => {
-  isModalOpened.value = false;
-};
 </script>
 <template>
   <div id="my_works">
     <h2>Mes réalisations</h2>
     <section v-for="work in works" :key="work.id">
-      <h3>{{ work.nom }}</h3>
-      <button @click="openModal(work)">
-        <img
-        :src="`./src/assets/img/${work.image}.jpg`"
-        :alt="`${work.image}`" />
-      </button>
-      <MyModal
-        :currentProject="selectedProject"
-        :isOpen="isModalOpened"
-        @modal-close="closeModal"
-        name="first-modal"
-      >
-        <template #header> </template>
-        <template #content> </template>
-        <template #footer> </template>
-      </MyModal>
+      <Work :work="work" />
     </section>
   </div>
 </template>
+
 <style scoped>
-#my_works {
-  border: 1px solid black;
-}
 div {
   margin-bottom: 2rem;
 }
-
-h3:first-of-type {
-  margin-top: 1rem;
-}
-
-h3 {
+section:hover {
   width: fit-content;
   margin: auto;
-  margin-top: 0.5rem;
-  font-size: 0.7rem;
-}
-
-button {
-  display: block;
-  width: fit-content;
-  margin: auto;
-  margin-top: 1rem;
-}
-
-img {
-  display: block;
-  width: 350px;
-  height: 200px;
-  margin: auto;
+  box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
 }
 </style>
