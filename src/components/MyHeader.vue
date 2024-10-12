@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#main">
+    <a href="#main" @click="underLineFirstNavlink">
       <img
         class="photo"
         src="@/assets/img/logo/brand-logo.png"
@@ -16,13 +16,13 @@
     <nav>
       <ul>
         <li>
-          <a href="#main">À propos de moi</a>
+          <a href="#main" @click="toggleUnderline">À propos de moi</a>
         </li>
         <li>
-          <a href="#my_works">Réalisations</a>
+          <a href="#my_works" @click="toggleUnderline">Réalisations</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" @click="toggleUnderline">Contact</a>
         </li>
       </ul>
     </nav>
@@ -31,12 +31,37 @@
 
 <script setup>
 import { ref } from "vue";
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  const firstNavLink = document.querySelector("nav ul li a");
+  firstNavLink.style.textDecoration = "underline";
+  firstNavLink.style.textUnderlineOffset = "8px";
+});
+
+const underLineFirstNavlink = () => {
+  document.querySelectorAll("nav ul li a").forEach((link)=> {
+    link.style.textDecoration = "none";
+  });
+  const firstNavLink = document.querySelector("nav ul li a");
+  firstNavLink.style.textDecoration = "underline";
+  firstNavLink.style.textUnderlineOffset = "8px";
+};
 
 const show = ref(true);
 const title = import.meta.env.VITE_APP_TITLE;
+const toggleUnderline = (e) => {
+  document.querySelectorAll("nav ul li a").forEach((link)=> {
+    link.style.textDecoration = "none";
+  });
+  e.target.style.textDecoration = "underline";
+  e.target.style.textUnderlineOffset = "8px";
+};
+
 function toggle() {
   show.value = !show.value;
-}
+};
+
 let windowWidth = window.innerWidth;
 if (windowWidth < 600) {
   show.value = false;
