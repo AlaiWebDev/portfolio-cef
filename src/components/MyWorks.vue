@@ -36,11 +36,17 @@ const works = ref([
 
 <style scoped>
 div {
-  margin-bottom: 2rem;
-}
-section:hover {
   width: fit-content;
   margin: auto;
+}
+section {
+  margin: auto;
+  margin-bottom: 2rem;
+  border: 1px solid #733c4a;
+  
+}
+section:hover {
+  border: 1px solid white;
   box-shadow: 19px 19px 15px -3px rgba(1, 4, 65,0.3);
 }
 </style>
