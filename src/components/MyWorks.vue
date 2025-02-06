@@ -1,29 +1,8 @@
 <script setup>
 import { ref } from "vue";
 import Work from './Work.vue';
-const works = ref([
-  {
-    id: 1,
-    nom: "DWWM-ID-Formation-Strasbourg",
-    date: "03/2022-11/2022",
-    apprenants: 12,
-    image: "work-1",
-  },
-  {
-    id: 2,
-    nom: "DWWM-AFPA-Angers",
-    date: "09/2023-09/2023",
-    apprenants: 11,
-    image: "work-2",
-  },
-  {
-    id: 3,
-    nom: "DWWM-AFPA-Marseille",
-    date: "09/2023-11/2023",
-    apprenants: 17,
-    image: "work-3",
-  },
-]);
+import datasProjects from '@/assets/datas/datas.json';
+const works = ref(datasProjects);
 </script>
 <template>
   <div id="my_works">
