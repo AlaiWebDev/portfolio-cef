@@ -24,7 +24,7 @@ const emailAddress = import.meta.env.VITE_EMAIL_ADRESS;
 </script>
 
 <template>
-    <div id="contact">
+    <section id="contact">
         <h2>Me contacter</h2>
         <form @submit.prevent="sendEmail()">
             <label>
@@ -41,7 +41,7 @@ const emailAddress = import.meta.env.VITE_EMAIL_ADRESS;
             </label>
             <input type="submit" value="Envoyer">
         </form>
-    </div>
+    </section>
 </template>
 
 <style scoped>
